@@ -26,7 +26,7 @@ class SimpleAutoAds {
 
     public function sad_content($content) {
         global $post;
-        if ( is_singular() && in_the_loop() && is_main_query() /* && $post->ID >= 6887 */ ) {
+        if ( is_singular() && in_the_loop() && is_main_query() ) {
             $code = '<div style="text-align: center">' . get_option('ads-code') . '</div>';
             $content = $this->sad_insert($code, $content);
         }
